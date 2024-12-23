@@ -27,8 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - name: Start the application
-        run: npm run dev &
-        env:
-          CI: true
+    - run: npm run dev &
+      env:
+        CI: true
     - run: npm run cypress
